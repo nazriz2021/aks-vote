@@ -3,7 +3,7 @@ name: Deploy to AKS
 on:
   push:
     branches:
-      - Master  # Change this to the appropriate branch name
+      - main  # Change this to the appropriate branch name
 
 jobs:
   deploy:
