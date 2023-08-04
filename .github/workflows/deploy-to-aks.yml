@@ -3,11 +3,11 @@ name: Deploy to AKS
 on:
   push:
     branches:
-      - Master  # Change this to the appropriate branch name
+      - Master
 
 jobs:
   deploy:
-    name: Deploy to Kubernetes
+    name: Deploy to AKS
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
