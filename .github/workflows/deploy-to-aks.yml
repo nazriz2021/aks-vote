@@ -2,8 +2,9 @@ name: Deploy to AKS
 
 on:
   push:
-    branches:
-      - Master
+    branches: [ "Master" ]
+  pull_request:
+    branches: [ "Master" ]
 
 jobs:
   deploy:
