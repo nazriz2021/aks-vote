@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+
     - name: Checkout code
       uses: actions/checkout@v2
 
@@ -17,7 +22,9 @@ jobs:
       run: |
         mkdir -p $HOME/.kube
         echo "$KUBE_CONFIG" > $HOME/.kube/config
-        kubectl version  # Print kubectl version for verification
+        kubectl version
 
     - name: Deploy to AKS
       run: kubectl apply -f azure-vote.yaml
+
+
